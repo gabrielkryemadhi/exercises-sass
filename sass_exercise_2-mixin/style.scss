@@ -1,0 +1,53 @@
+$r: red;
+$g: green;
+$b: blue;
+
+@mixin cards ($c,$b-c,$f-s){
+  color: $c;
+  border-color: $b-c;
+  font-size: $f-s;
+}
+
+.container {
+height: 45vh;
+margin: 1rem;
+border: 1px solid $r;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+flex-direction: column;
+  h1{
+    text-decoration: underline;
+    text-decoration-color: $b;
+    margin-top: 3rem;
+    color: $g;
+  }
+  .upper{
+    display: flex;
+    margin:0.5rem 1rem 1rem;
+    padding: 0 1rem;
+    article{
+      border: 1px solid $g;
+      padding: 1rem;
+    }
+    .one{
+      @include cards($b, $g, 1rem)
+    }
+    .two{
+      @include cards($g, $r, 1rem)
+    }
+  }
+  .lower{
+    margin:0.5rem 1rem 1rem;
+    width: 100%;
+    article{  
+      border: 1px solid $g;
+      padding: 1rem;
+      margin: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include cards($g, $b, 24px)
+  }
+ }
+}

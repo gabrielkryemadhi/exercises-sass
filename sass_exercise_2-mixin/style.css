@@ -1,1 +1,50 @@
-/*# sourceMappingURL=style.css.map */
+.container {
+  height: 45vh;
+  margin: 1rem;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.container h1 {
+  text-decoration: underline;
+  -webkit-text-decoration-color: blue;
+          text-decoration-color: blue;
+  margin-top: 3rem;
+  color: green;
+}
+.container .upper {
+  display: flex;
+  margin: 0.5rem 1rem 1rem;
+  padding: 0 1rem;
+}
+.container .upper article {
+  border: 1px solid green;
+  padding: 1rem;
+}
+.container .upper .one {
+  color: blue;
+  border-color: green;
+  font-size: 1rem;
+}
+.container .upper .two {
+  color: green;
+  border-color: red;
+  font-size: 1rem;
+}
+.container .lower {
+  margin: 0.5rem 1rem 1rem;
+  width: 100%;
+}
+.container .lower article {
+  border: 1px solid green;
+  padding: 1rem;
+  margin: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: green;
+  border-color: blue;
+  font-size: 24px;
+}/*# sourceMappingURL=style.css.map */
