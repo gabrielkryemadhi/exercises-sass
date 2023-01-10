@@ -1,0 +1,89 @@
+@use 'var.scss' as var;
+@use 'function.scss' as func;
+
+@mixin cards ($c,$b-c,$value){
+  color: $c;
+  border-color: $b-c;
+  font-size: func.fontSize($value);
+}
+
+.container {
+margin: func.fontSize(16);
+border: func.fontSize(1) solid var.$r;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+flex-direction: column;
+
+  .header1{
+    margin-top: 3rem;
+    color: var.$g;
+    border-bottom: func.fontSize(3) solid var.$b;
+  }
+
+  h2{
+    @extend .header1;
+    padding: 1rem;
+    border: func.fontSize(2) solid var.$r;
+  }
+
+  .upper{
+    display: flex;
+    margin:0.5rem 1rem 1rem;
+    padding: 0 1rem;
+    article{
+      border: 1px solid var.$g;
+      padding: 1rem;
+    }
+    .one{
+      @include cards(var.$b, var.$g, 17)
+    }
+    .two{
+      @include cards(var.$g, var.$r, 16)
+    }
+  }
+  .lower{
+    margin:0.5rem 1rem 1rem;
+    width: 100%;
+    article{  
+      border: func.fontSize(1) solid var.$g;
+      padding: 1rem;
+      margin: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include cards(var.$g, var.$b, 24)
+  }
+ }
+ .boxes{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+ }
+ @for $box from 1 through 20{
+    .b#{$box} {
+        width: func.fontSize(45);
+        height: func.fontSize(45);
+        background-color: darken($color: white, $amount: $box * 5%);
+        color: lighten($color: #000000, $amount: $box * 5%);
+        @if $box == 10 {
+            background-color: blue;
+            color: red;
+        }
+    }
+ }
+ @for $size from 1 through 4{
+    .fs-#{$size}rem {
+      @if $size == 1 {
+        font-size: 1rem;
+      }
+      @else if $size == 2{
+        font-size: 2rem;
+      }
+      @else {
+        font-size: 3rem;
+      }
+    }
+ }
+}
