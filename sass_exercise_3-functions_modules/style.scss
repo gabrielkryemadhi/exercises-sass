@@ -1,0 +1,51 @@
+@use 'var.scss' as var;
+
+@mixin cards ($c,$b-c,$value){
+  color: $c;
+  border-color: $b-c;
+  font-size: $remValue;
+}
+
+.container {
+height: 45vh;
+margin: 1rem;
+border: 1px solid var.$r;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+flex-direction: column;
+  h1{
+    text-decoration: underline;
+    text-decoration-color: var.$b;
+    margin-top: 3rem;
+    color: var.$g;
+  }
+  .upper{
+    display: flex;
+    margin:0.5rem 1rem 1rem;
+    padding: 0 1rem;
+    article{
+      border: 1px solid var.$g;
+      padding: 1rem;
+    }
+    .one{
+      @include cards(var.$b, var.$g, 16)
+    }
+    .two{
+      @include cards(var.$g, var.$r, 16)
+    }
+  }
+  .lower{
+    margin:0.5rem 1rem 1rem;
+    width: 100%;
+    article{  
+      border: 1px solid var.$g;
+      padding: 1rem;
+      margin: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include cards(var.$g, var.$b, 24)
+  }
+ }
+}
