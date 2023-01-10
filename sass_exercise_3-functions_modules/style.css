@@ -1,7 +1,7 @@
 .container {
   height: 45vh;
   margin: 1rem;
-  border: 1px solid red;
+  border: 0.0625rem solid red;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -26,7 +26,7 @@
 .container .upper .one {
   color: blue;
   border-color: green;
-  font-size: 1rem;
+  font-size: 1.0625rem;
 }
 .container .upper .two {
   color: green;
@@ -38,7 +38,7 @@
   width: 100%;
 }
 .container .lower article {
-  border: 1px solid green;
+  border: 0.0625rem solid green;
   padding: 1rem;
   margin: 0 2rem;
   display: flex;
@@ -46,5 +46,5 @@
   justify-content: center;
   color: green;
   border-color: blue;
-  font-size: 24px;
+  font-size: 1.5rem;
 }/*# sourceMappingURL=style.css.map */

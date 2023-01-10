@@ -1,15 +1,16 @@
 @use 'var.scss' as var;
+@use 'function.scss' as func;
 
 @mixin cards ($c,$b-c,$value){
   color: $c;
   border-color: $b-c;
-  font-size: $remValue;
+  font-size: func.fontSize($value);
 }
 
 .container {
 height: 45vh;
-margin: 1rem;
-border: 1px solid var.$r;
+margin: func.fontSize(16);
+border: func.fontSize(1) solid var.$r;
 display: flex;
 align-items: center;
 justify-content: flex-end;
@@ -29,7 +30,7 @@ flex-direction: column;
       padding: 1rem;
     }
     .one{
-      @include cards(var.$b, var.$g, 16)
+      @include cards(var.$b, var.$g, 17)
     }
     .two{
       @include cards(var.$g, var.$r, 16)
@@ -39,7 +40,7 @@ flex-direction: column;
     margin:0.5rem 1rem 1rem;
     width: 100%;
     article{  
-      border: 1px solid var.$g;
+      border: func.fontSize(1) solid var.$g;
       padding: 1rem;
       margin: 0 2rem;
       display: flex;
